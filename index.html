@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>N-Queen Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>N-Queen Problem Visualizer</h1>
+
+    <div class="container">
+      <div class="left-panel">
+        <div class="control-panel">
+          <div class="control-group">
+            <label for="board-size">Board Size (n):</label>
+            <input type="number" id="board-size" min="4" max="15" value="4" />
+
+            <div class="button-group">
+              <button id="start-btn">Start</button>
+              <button id="pause-btn" disabled>Pause</button>
+              <button id="resume-btn" disabled>Resume</button>
+              <button id="reset-btn">Reset</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="algorithm">Algorithm:</label>
+            <select id="algorithm" disabled>
+              <option value="backtracking" selected>Backtracking</option>
+            </select>
+
+            <div class="speed-control">
+              <label for="speed">Speed:</label>
+              <input type="range" id="speed" min="1" max="100" value="5" />
+              <span class="speed-value" id="speed-value">5</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="board-container">
+          //
+          <div id="board-container" style="display: flex">
+            <div style="display: flex">
+              <div
+                id="box-0-0"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-0-1"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-0-2"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-0-3"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+            </div>
+            <div style="display: flex">
+              <div
+                id="box-1-0"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-1-1"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-1-2"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-1-3"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+            </div>
+            <div style="display: flex">
+              <div
+                id="box-2-0"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-2-1"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-2-2"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-2-3"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+            </div>
+            <div style="display: flex">
+              <div
+                id="box-3-0"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-3-1"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-3-2"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+              <div
+                id="box-3-3"
+                style="
+                  width: 35px;
+                  height: 35px;
+                  border: 2px solid black;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              ></div>
+            </div>
+          </div>
+          //
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div id="statistics">
+          <div class="stat-item">
+            <h2>Solutions found:</h2>
+            <span class="stat-value" id="solutions-count">0</span>
+          </div>
+          <div class="stat-item">
+            <span>Steps taken:</span>
+            <span class="stat-value" id="steps-count">0</span>
+          </div>
+        </div>
+
+        <div id="solutions">
+          <div class="solutions-header">
+            <h3>Found Solutions</h3>
+            <span id="solution-count-display">0 solutions</span>
+          </div>
+          <div class="solutions-grid" id="solutions-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
